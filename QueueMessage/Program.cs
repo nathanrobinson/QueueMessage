@@ -77,9 +77,7 @@ namespace AzureQueueTest
                 var queueConnectionString = ConfigurationManager.AppSettings["Microsoft.ServiceBus.ConnectionString"];
                 if(string.IsNullOrEmpty(queueConnectionString))
                     throw new ArgumentNullException(nameof(queueConnectionString));
-
-                Console.WriteLine(queueConnectionString);
-
+                
                 var host =
                     sbc.Host(queueConnectionString,
                              h => {});
