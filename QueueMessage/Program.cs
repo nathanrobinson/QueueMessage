@@ -15,6 +15,7 @@ namespace AzureQueueTest
     {
         static void Main(string[] args)
         {
+            log4net.Config.XmlConfigurator.Configure();
             var instanceId = Guid.NewGuid();
             var bus = InitializeBus(instanceId);
             try
